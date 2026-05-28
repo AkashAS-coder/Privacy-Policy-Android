@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – ElderLink AR</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #2E86C1;
+      --green: #27AE60;
+      --dark: #0F2A45;
+      --mid: #1A3A5C;
+      --light-bg: #F4F8FC;
+      --text: #1a2e3f;
+      --muted: #5a7a90;
+      --border: #d0e4f0;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--light-bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--dark);
+      padding: 28px 0 24px;
+      text-align: center;
+      border-bottom: 3px solid var(--blue);
+    }
+
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-icon {
+      width: 64px;
+      height: 64px;
+      background: #fff;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .logo-icon svg { width: 54px; height: 54px; }
+
+    .logo-text {
+      text-align: left;
+    }
+
+    .logo-text .name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 32px;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    .logo-text .name span { color: var(--green); }
+
+    .logo-text .tagline {
+      font-size: 12px;
+      color: #8ab4d4;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* NAV PILL */
+    .nav-pill {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      padding: 0 16px;
+    }
+
+    .nav-pill a {
+      color: #8ab4d4;
+      font-size: 13px;
+      text-decoration: none;
+      padding: 4px 14px;
+      border: 1px solid rgba(138,180,212,0.3);
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+
+    .nav-pill a:hover, .nav-pill a.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    /* HERO BAND */
+    .hero {
+      background: linear-gradient(135deg, var(--mid) 0%, #1a4a6c 100%);
+      text-align: center;
+      padding: 48px 20px 40px;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 5vw, 44px);
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #b8d9f5;
+      font-size: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      font-size: 12px;
+      color: #a8e6c0;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .content {
+      padding: 56px 0 80px;
+    }
+
+    /* SECTIONS */
+    .section {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 36px 40px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--blue);
+      border-radius: 4px 0 0 4px;
+    }
+
+    .section.green::before { background: var(--green); }
+
+    .section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--dark);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2 .icon {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      background: #e8f4fd;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .section.green h2 .icon { background: #e8f8ef; }
+
+    .section h2 .icon svg { width: 18px; height: 18px; }
+
+    .section p { color: #3a5a70; margin-bottom: 12px; font-size: 15px; }
+    .section p:last-child { margin-bottom: 0; }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 12px;
+    }
+
+    .section ul li {
+      padding: 6px 0 6px 24px;
+      position: relative;
+      color: #3a5a70;
+      font-size: 15px;
+      border-bottom: 1px solid #f0f4f8;
+    }
+
+    .section ul li:last-child { border-bottom: none; }
+
+    .section ul li::before {
+      content: '';
+      position: absolute;
+      left: 6px; top: 50%;
+      transform: translateY(-50%);
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .section.green ul li::before { background: var(--green); }
+
+    /* HIGHLIGHT BOX */
+    .highlight {
+      background: #e8f4fd;
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #1a4a6c;
+      margin: 14px 0 0;
+      border-left: 3px solid var(--blue);
+    }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: var(--dark);
+      border-radius: 16px;
+      padding: 36px 40px;
+      color: #fff;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .contact-card p { color: #8ab4d4; font-size: 15px; margin-bottom: 20px; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .contact-item {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .contact-item .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #8ab4d4;
+      margin-bottom: 6px;
+    }
+
+    .contact-item .value {
+      font-size: 15px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .contact-item .value a { color: var(--green); text-decoration: none; }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      border-top: 2px solid var(--blue);
+      text-align: center;
+      padding: 28px 20px;
+    }
+
+    footer p { color: #5a7a90; font-size: 13px; line-height: 2; }
+    footer strong { color: #8ab4d4; }
+
+    /* LAST UPDATED */
+    .meta-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 20px;
+      margin-bottom: 28px;
+      font-size: 13px;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .meta-bar span strong { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .section { padding: 24px 20px; }
+      .contact-card { padding: 28px 20px; }
+      .logo-text .name { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-wrap">
+    <div class="logo-icon">
+      <!-- Inline logo SVG recreation -->
+      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="32" cy="40" rx="20" ry="28" fill="none" stroke="#2E86C1" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="32" cy="30" r="8" fill="#2E86C1"/>
+        <path d="M22 52 Q32 44 42 52" fill="#2E86C1"/>
+        <rect x="46" y="50" width="16" height="5" rx="2.5" fill="#27AE60"/>
+        <rect x="51.5" y="44.5" width="5" height="16" rx="2.5" fill="#27AE60"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <div class="name">ElderLink <span>AR</span></div>
+      <div class="tagline">AI-Powered Senior Wellness</div>
+    </div>
+  </div>
+  <nav class="nav-pill">
+    <a href="#privacy" class="active">Privacy Policy</a>
+    <a href="#data">Data Use</a>
+    <a href="#rights">Your Rights</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="badge">Legal &amp; Transparency</div>
+  <h1>Privacy Policy</h1>
+  <p>We are committed to protecting your privacy and handling your data with care and transparency.</p>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+  <div class="content">
+
+    <div class="meta-bar">
+      <span><strong>Effective Date:</strong> May 28, 2026</span>
+      <span><strong>Last Updated:</strong> May 28, 2026</span>
+      <span><strong>Version:</strong> 1.0</span>
+    </div>
+
+    <!-- INTRO -->
+    <div class="section" id="privacy">
+      <h2>
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2E86C1" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </span>
+        Introduction
+      </h2>
+      <p>Welcome to <strong>ElderLink AR</strong>. This Privacy Policy explains how we collect, use, and protect information when you use our mobile application. We respect your privacy and are committed to being fully transparent about our data practices.</p>
+      <p>By using ElderLink AR, you agree to the practices described in this policy. If you do not agree, please discontinue use of the app.</p>
+      <div class="highlight">
+        ⚠️ This app is not intended to replace professional medical advice. Always consult a qualified healthcare provider for medical decisions.
+      </div>
+    </div>
+
+    <!-- INFORMATION WE COLLECT -->
+    <div class="section" id="data">
+      <h2>
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2E86C1" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </span>
+        Information We Collect
+      </h2>
+      <p><strong>ElderLink AR does not collect, store, or transmit any personal data.</strong> All features in the app operate entirely on your device.</p>
+      <ul>
+        <li><strong>Camera</strong> — used only for AR exercise guidance. All processing happens locally on your device. No images or video are stored or sent anywhere.</li>
+        <li><strong>Microphone</strong> — used only for voice interaction. All speech processing happens on-device. No audio is recorded or transmitted.</li>
+        <li><strong>AI Companion Chat</strong> — conversations are handled directly within the app. No messages are saved or sent to external servers.</li>
+      </ul>
+      <div class="highlight">
+        ✅ No account creation required. No data leaves your device. No servers store your information.
+      </div>
+    </div>
+
+    <!-- HOW WE USE -->
+    <div class="section green">
+      <h2>
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </span>
+        How Features Work
+      </h2>
+      <p>All app features function entirely on your device without sending data to any external service:</p>
+      <ul>
+        <li><strong>AR Exercise Guidance</strong> — camera-based body tracking runs locally in real time and is discarded immediately after use</li>
+        <li><strong>AI Companion Chat</strong> — responses are generated on-device; no conversation history is stored</li>
+        <li><strong>Voice Interaction</strong> — speech recognition and text-to-speech run locally; no audio is retained</li>
+        <li><strong>Accessible Design</strong> — no tracking, no analytics, no advertising SDKs</li>
+      </ul>
+    </div>
+
+    <!-- DATA SHARING -->
+    <div class="section">
+      <h2>
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2E86C1" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
+        </span>
+        Data Sharing &amp; Third Parties
+      </h2>
+      <p><strong>We do not share any data with third parties</strong> because we do not collect any data in the first place. ElderLink AR has no analytics tools, no advertising networks, and no third-party SDKs that access your personal information.</p>
+    </div>
+
+    <!-- YOUR RIGHTS -->
+    <div class="section green" id="rights">
+      <h2>
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </span>
+        Your Rights
+      </h2>
+      <p>Because ElderLink AR does not collect or store any personal data, there is no data held about you to access, correct, or delete. You can use the app with complete confidence that your information stays on your device at all times.</p>
+      <p>If you have any questions or concerns, feel free to contact the developer using the details below.</p>
+    </div>
+
+    <!-- DATA SECURITY -->
+    <div class="section">
+      <h2>
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2E86C1" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </span>
+        Data Security
+      </h2>
+      <p>Since all app features run entirely on your device and no personal data is collected or transmitted, there is no user data stored on any server to protect. Your privacy is guaranteed by design.</p>
+      <p>Camera, microphone, and AI features are processed in real time on-device and immediately discarded — nothing is saved, uploaded, or shared.</p>
+    </div>
+
+    <!-- CHILDREN -->
+    <div class="section">
+      <h2>
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2E86C1" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </span>
+        Children's Privacy
+      </h2>
+      <p>ElderLink AR is designed for elderly adults and is <strong>not intended for children under the age of 13</strong>. We do not knowingly collect data from children. If you believe a child has provided data through our app, please contact us immediately.</p>
+    </div>
+
+    <!-- CHANGES -->
+    <div class="section green">
+      <h2>
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+        </span>
+        Changes to This Policy
+      </h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last Updated" date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+      <p>For significant changes, we will notify users through an in-app notification.</p>
+    </div>
+
+
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 <strong>ElderLink AR</strong> &nbsp;|&nbsp; All rights reserved.</p>
+  <p style="margin-top:6px; font-size:12px;">This app is not intended to replace professional medical advice.</p>
+</footer>
+
+</body>
+</html>
